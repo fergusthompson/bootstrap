@@ -12,6 +12,8 @@
 		integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
 	</script>
 	<script src="https://kit.fontawesome.com/1b4ff420ff.js" crossorigin="anonymous"></script>
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css" type="text/css" />
 </head>
 
 <body>
@@ -45,7 +47,7 @@
 			<a href="/login">Sign In / Sign Up</a>
 		</div>
 	</nav>
-	<article class="container mt-3">
+	<!----<div class="container alert-container">
 		<div class="row d-none d-sm-block">
 			<div class="col-12">
 				<div class="alert alert-warning"><strong>Sale Now On!</strong>
@@ -54,24 +56,29 @@
 				</div>
 			</div>
 		</div>
-		<!--callout-->
+		<--callout-->
+	<div class="callout-container container-fluid">
+		<div class="opaque-overlay">&nbsp;</div>
 		<div class="row">
 			<div class="col-12">
 				<section class="callout jumbotron text-center">
-					<h1>The finest whiskeys delivered to your doorstep</h1>
+					<h1 class="jumbotron-header">The finest whiskeys delivered to your doorstep</h1>
+					<hr class="block-divider block-divider-orange">
 					<p class="lead">Sign up today to start receiving the world's finest whiskeys every month.
 						<s class="d-none d-sm-inline">£19.99</s>
 						<span class="d-inline d-sm-none"><br></span>
 						<strong><Mark>First one is free!</mark></strong> </p>
 					<p class="text-muted"><small>You must be over 18 to sign up to our service.  
-           Please, drink responsibly.</small></p>
-					<button class="btn btn-success btn-lg" >Sign up!</button>
+                            Please, drink responsibly.</small></p>
+					<button class="btn btn--cta btn--red btn-lg" data-toggle="modal" data-target="#signupmodal">Sign up!</button>
 				</section>
 			</div>
 		</div>
-		<!--/callout-->
-		<hr>
-		<!--quotes-->
+	</div>
+	<!--/callout-->
+	</div>
+	<!--quotes-->
+	<div class="container quotes-container">
 		<section class="quotes">
 			<div class="row">
 				<div class="col-12 my-5">
@@ -97,7 +104,7 @@
 						<div class="media">
 							<div class="d-none d-sm-block">
 								<img src="images/guy-image.png" class="rounded-circle mr-3" height="100" width="100" >
-      </div>
+         </div>
 								<div class="media-body">
 									<blockquote class="blockquote">
 										<p>I haven't been sober for months!</p>
@@ -108,9 +115,11 @@
 						</div>
 					</div>
 		</section>
-		<!--/quotes-->
-		<hr>
-		<!--features-->
+	</div>
+	<!--/quotes-->
+	<hr>
+	<!--features-->
+	<div class="features-container">
 		<section class="features">
 			<div class="row">
 				<div class="col-12 my-5">
@@ -145,16 +154,50 @@
 					</div>
 				</div>
 		</section>
+	</div>
+
+	<div class="modal" tabindex="-1" role="dialog" id="signupmodal">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">Sign Up To Whiskey Drop</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                     <span aria-hidden="true">&times;</span>
+                    </button>
+				</div>
+				<div class="modal-body">
+					<form>
+						<div class="form-group">
+							<label for="exampleInputEmail1">Email address</label>
+							<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+							<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+						</div>
+						<div class="form-group">
+							<label for="password">Password</label>
+							<input type="password" class="form-control" id="password">
+                        </div>
+							<div class="form-group">
+								<label for="repeatpassword">Repeat Password</label>
+								<input type="password" class="form-control" id="repeatpassword">
+                        </div>
+
+								<button type="submit" class="btn btn-success">Submit</button>
+					</form>
+				</div>
+
+			</div>
 		</div>
-		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-			integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
-		</script>
-		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-			integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-		</script>
-		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-			integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
-		</script>
+	</div>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+		integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+	</script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+	</script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+		integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+	</script>
 
 </body>
 
